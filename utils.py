@@ -22,6 +22,3 @@ def armar_df(S):
     df['Informacion'] = -np.log2(df['Probabilidad'])
     df_sorted = df.sort_values('Paquetes', ascending=False)
     return df_sorted
-
-def entropia(S):
-    return sum([probabilidad*-math.log2(probabilidad) for probabilidad in probabilidades(S)])
